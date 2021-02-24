@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Supplier data UI'
+define service ZUI_SUPPLIER_DATA {
+  expose ZCE_SUPPLIER_DATA;
+}

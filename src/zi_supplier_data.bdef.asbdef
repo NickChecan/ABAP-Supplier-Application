@@ -1,0 +1,24 @@
+managed implementation in class zbp_i_supplier_data unique;
+
+define behavior for ZI_SUPPLIER_DATA alias SupplierData
+persistent table ztsupplier
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+
+  // Administrative fields (read only)
+  field ( readonly ) id, ekorg, werks, plant_name, berid, bertx,
+  ekgrp, ebeln, ebelp, etenr, matnr, maktx, dispo, lifnr,
+  vendor_name, calc_ship_date, pabnum, pabpos, in_transit_qty,
+  bal_qty_w_asn, ship_status, action;
+
+  update;
+
+  // Instance action and dynamic action control
+  action ( features : instance ) accept result [1] $self;
+
+  // Instance action and dynamic action control
+  action ( features : instance ) reject result [1] $self;
+
+}

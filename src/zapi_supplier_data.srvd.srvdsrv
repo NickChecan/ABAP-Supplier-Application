@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Supplier data API'
+define service ZAPI_SUPPLIER_DATA {
+  expose ZC_SUPPLIER_DATA as SupplierDataProcessor;
+}

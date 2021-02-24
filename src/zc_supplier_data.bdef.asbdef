@@ -1,0 +1,12 @@
+projection;
+
+define behavior for ZC_SUPPLIER_DATA alias SupplierDataProcessor
+use etag
+{
+
+  use update;
+
+  use action accept;
+  use action reject;
+
+}
