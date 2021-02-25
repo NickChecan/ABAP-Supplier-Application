@@ -16,9 +16,9 @@ CLASS zcl_generate_supplier_data IMPLEMENTATION.
 
     DATA: sdata TYPE TABLE OF ztsupplier.
 
-*    DELETE FROM ztsdata.
+*    DELETE FROM ztsupplier.
 *    out->write('Data deleted').
-*
+
 *    EXIT.
 
     sdata = VALUE #(
@@ -26,7 +26,7 @@ CLASS zcl_generate_supplier_data IMPLEMENTATION.
         id               =  1
         ekorg            =  'C000'
         werks            =  'CX01'
-        plant_name       =  'CX01'
+        plant_name       =  'Sales Plant Indaiatuba'
         berid            =  'CX01'
         bertx            =  'Coxinha Ilimited'
         ekgrp            =  'H1C'
@@ -44,19 +44,20 @@ CLASS zcl_generate_supplier_data IMPLEMENTATION.
         in_transit_qty   =  0
         bal_qty_w_asn    =  100
         ship_status      =  'Should Have Shipped,But Has Not'
+        action           = 'New'
       )
       (
         id               =  2
         ekorg            =  'C000'
-        werks            =  'CX01'
-        plant_name       =  'CX01'
+        werks            =  'CX02'
+        plant_name       =  'Middle Earth Plant'
         berid            =  'CX01'
         bertx            =  'Coxinhas Houses'
         ekgrp            =  'ZNP'
         ebeln            =  '5510991845'
         ebelp            =  '10'
         etenr            =  '2'
-        matnr            =  '1010'
+        matnr            =  '1033110046'
         maktx            =  'Pasta'
         dispo            =  '400'
         lifnr            =  '2666'
@@ -67,19 +68,20 @@ CLASS zcl_generate_supplier_data IMPLEMENTATION.
         in_transit_qty   =  17
         bal_qty_w_asn    =  0
         ship_status      =  'Should Have Shipped, And Has'
+        action           = 'New'
       )
       (
         id               =  3
         ekorg            =  'C000'
-        werks            =  'CX01'
-        plant_name       =  'CX01'
+        werks            =  'CX07'
+        plant_name       =  'Night City'
         berid            =  'CX01'
         bertx            =  'Coxinhas Houses'
         ekgrp            =  'H08'
         ebeln            =  '5500077117'
         ebelp            =  '10'
         etenr            =  '1'
-        matnr            =  '11231'
+        matnr            =  '1033110047'
         maktx            =  'KUNJBIHARI-1'
         dispo            =  ' '
         lifnr            =  '2666'
@@ -90,12 +92,13 @@ CLASS zcl_generate_supplier_data IMPLEMENTATION.
         in_transit_qty   =  6
         bal_qty_w_asn    =  91
         ship_status      =  'Should Have Shipped,But Has Not'
+        action           = 'New'
       )
       (
         id               =  4
         ekorg            =  'C000'
-        werks            =  'CX01'
-        plant_name       =  'CX01'
+        werks            =  'CX05'
+        plant_name       =  'Hogwarts'
         berid            =  'CX01'
         bertx            =  'Coxinhas Houses'
         ekgrp            =  '10B'
@@ -113,19 +116,20 @@ CLASS zcl_generate_supplier_data IMPLEMENTATION.
         in_transit_qty   =  822
         bal_qty_w_asn    =  0
         ship_status      =  'Should Have Shipped, And Has'
+        action           = 'New'
       )
       (
         id               =  5
         ekorg            =  'C000'
-        werks            =  'CX01'
-        plant_name       =  'CX01'
+        werks            =  'CX02'
+        plant_name       =  'Middle Earth Plant'
         berid            =  'CX01'
         bertx            =  'Coxinhas Houses'
         ekgrp            =  'H1C'
         ebeln            =  '5500074734'
         ebelp            =  '10'
         etenr            =  '0'
-        matnr            =  '13'
+        matnr            =  '14M7300'
         maktx            =  'Volta Rita'
         dispo            =  'CAZ'
         lifnr            =  '2666'
@@ -136,19 +140,20 @@ CLASS zcl_generate_supplier_data IMPLEMENTATION.
         in_transit_qty   =  0
         bal_qty_w_asn    =  5
         ship_status      =  'Should Have Shipped,But Has Not'
+        action           = 'New'
       )
       (
         id               =  6
         ekorg            =  'C000'
-        werks            =  'CX01'
-        plant_name       =  'CX01'
+        werks            =  'CX09'
+        plant_name       =  'Sword Coast'
         berid            =  'CX01'
         bertx            =  'Coxinhas Houses'
         ekgrp            =  '101'
         ebeln            =  '5510991815'
         ebelp            =  '10'
         etenr            =  '2'
-        matnr            =  '31'
+        matnr            =  '14M7301'
         maktx            =  'Picole'
         dispo            =  '15'
         lifnr            =  '2668'
@@ -159,19 +164,20 @@ CLASS zcl_generate_supplier_data IMPLEMENTATION.
         in_transit_qty   =  4
         bal_qty_w_asn    =  200
         ship_status      =  'Should Have Shipped,But Has Not'
+        action           = 'New'
       )
       (
         id               =  7
         ekorg            =  'C000'
-        werks            =  'CX01'
-        plant_name       =  'CX01'
+        werks            =  'CX09'
+        plant_name       =  'Sword Coast'
         berid            =  'CX01'
         bertx            =  'Coxinhas Houses'
         ekgrp            =  '101'
         ebeln            =  '5510991815'
         ebelp            =  '10'
         etenr            =  '1'
-        matnr            =  '411'
+        matnr            =  '14M7302'
         maktx            =  'Carne Seca'
         dispo            =  '15'
         lifnr            =  '2666'
@@ -182,6 +188,7 @@ CLASS zcl_generate_supplier_data IMPLEMENTATION.
         in_transit_qty   =  4
         bal_qty_w_asn    =  3
         ship_status      =  'Should Have Shipped,But Has Not'
+        action           = 'New'
       )
     ).
 

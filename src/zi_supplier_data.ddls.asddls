@@ -38,6 +38,14 @@ define root view ZI_SUPPLIER_DATA
       end              as status_color,
 
       action           as action,
+
+      case action
+        when 'Accepted' then 3
+        when 'Rejected' then 1
+        when 'Proposed' then 2
+        else 0
+      end              as action_status,
+
       reason           as reason,
       actual_date      as actual_date,
       actual_qty       as actual_qty,

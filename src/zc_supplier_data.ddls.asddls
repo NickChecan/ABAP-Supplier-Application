@@ -5,7 +5,7 @@
 // https://sapui5.hana.ondemand.com/#/topic/5fe439613f9c4e259015951594c423dc.html
 @UI: {
     headerInfo: {
-        typeName: 'SupplierData',
+        typeName: 'Supplier Order Information',
         typeNamePlural: 'Open Orders',
         title: {
             type: #STANDARD,
@@ -13,7 +13,6 @@
         }
     }
 }
-
 @Search.searchable: true
 define root view entity ZC_SUPPLIER_DATA
   as projection on ZI_SUPPLIER_DATA
@@ -26,7 +25,7 @@ define root view entity ZC_SUPPLIER_DATA
             type: #FOR_ACTION,
             position: 0,
             dataAction: 'accept',
-            label: 'Accept'            
+            label: 'Accept'
         },
         {
             type: #FOR_ACTION,
@@ -66,9 +65,14 @@ define root view entity ZC_SUPPLIER_DATA
         selectionField: [{ position: 30 }]
       }
       @EndUserText.label: 'Plant'
+      @Search.defaultSearchElement: true
       werks,
 
-      @UI.identification: [{ position: 40 }]
+      @UI: {
+        lineItem: [{ position: 40, importance: #MEDIUM }],
+        identification: [{ position: 40 }],
+        selectionField: [{ position: 40 }]
+      }
       @EndUserText.label: 'Plant Name'
       plant_name,
 
@@ -166,9 +170,17 @@ define root view entity ZC_SUPPLIER_DATA
       status_color,
 
       //@UI.identification: [{ position: 160 }]
+      @UI: {
+        lineItem: [{ position: 160, criticality: 'action_status', importance: #LOW }],
+        identification: [{ position: 160 }],
+        selectionField: [{ position: 160 }]
+      }
       @EndUserText.label: 'Action'
       @UI.fieldGroup: [{ qualifier: 'fgSupplierFollowUp', position: 10 }]
       action,
+
+      @UI.hidden: true
+      action_status,
 
       //@UI.identification: [{ position: 170 }]
       @EndUserText.label: 'Reason'

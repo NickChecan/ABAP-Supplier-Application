@@ -11,7 +11,7 @@ lock master
   field ( readonly ) id, ekorg, werks, plant_name, berid, bertx,
   ekgrp, ebeln, ebelp, etenr, matnr, maktx, dispo, lifnr,
   vendor_name, calc_ship_date, pabnum, pabpos, in_transit_qty,
-  bal_qty_w_asn, ship_status, action;
+  bal_qty_w_asn, ship_status;
 
   update;
 
